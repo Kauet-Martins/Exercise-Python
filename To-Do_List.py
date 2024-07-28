@@ -26,16 +26,18 @@ while True:
     
     choice = int(input("O que deseja fazer? "))
 
-    if choice == 1:
-        add_task()
+    match choice:
+        case 1:
+            add_task()
     
-    elif choice == 2:
-        remove_task()
+        case 2:
+            remove_task()
 
-    elif choice == 3:
-        print(exibir_lista(task))
+        case 3:
+            print(exibir_lista(task))
 
-    elif choice == 4:
-        break
-    else:
-        print("Escolha invalida tenta novamente")
+        case 4:
+            break
+        
+        case _:
+            print("Escolha invalida, tenta novamente")
